@@ -1,0 +1,29 @@
+redis:
+  #nodes: 192.168.160.131:7001,192.168.160.131:7002,192.168.160.131:7003,192.168.160.131:7004,192.168.160.131:7005,192.168.160.131:7006
+  nodes: 127.0.0.1:6379
+  commandTimeout: 10000  #redis操作的超时时间
+  maxTotal: 5000 #最大连接数
+  maxIdle: 30 #最大空闲连接数
+  minIdle: 5 #最小空闲连接数
+  maxWait: 3000  #获取连接最大等待时间 ms  #default -1
+  pwd: 
+
+server:  port: 8090
+  
+###consumer
+##该应用是否启用消费者
+rocketmq:
+  consumer:
+    isOnOff: on
+    groupName: demo-group
+#mq的nameserver地址
+#rocketmq.consumer.namesrvAddr=192.168.160.140:9876;192.168.160.141:9876
+    namesrvAddr: 127.0.0.1:9876
+#该消费者订阅的主题和tags("*"号表示订阅该主题下所有的tags),格式：topic~tag1||tag2||tag3;topic2~*;
+#rocketmq.consumer.topics=DemoTopic~*;
+    topics: demo-topic
+    consumeThreadMin: 20
+    consumeThreadMax: 64
+#设置一次消费消息的条数，默认为1条
+    consumeMessageBatchMaxSize: 1
+

@@ -1,0 +1,10 @@
+com\producer\rocketmq\exception\AppException.class
+com\producer\socketaio\ServerCompletionHandler$1.class
+com\producer\socketaio\AioServer.class
+com\producer\socketaio\Client.class
+com\producer\rocketmq\exception\RocketMQErrorEnum.class
+com\producer\ProducerApplication.class
+com\producer\rocketmq\exception\RocketMQException.class
+com\producer\rocketmq\exception\ErrorCode.class
+com\producer\socketaio\ServerCompletionHandler.class
+com\producer\rocketmq\MQProducerConfiguration.class
